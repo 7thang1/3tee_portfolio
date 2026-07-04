@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nguyen Van A — System Admin & SRE Portfolio</title>
+    <meta name="description" content="Portfolio của một System Administrator và Site Reliability Engineer với kinh nghiệm quản lý hạ tầng, Kubernetes, CI/CD và Cloud Infrastructure.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Particle Background -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">[</span>
+                <span class="logo-text">sre</span>
+                <span class="logo-cursor">_</span>
+                <span class="logo-bracket">]</span>
+            </a>
+            <div class="nav-links" id="nav-links">
+                <a href="#about" class="nav-link" data-section="about">About</a>
+                <a href="#skills" class="nav-link" data-section="skills">Skills</a>
+                <a href="#experience" class="nav-link" data-section="experience">Experience</a>
+                <a href="#projects" class="nav-link" data-section="projects">Projects</a>
+                <a href="#certifications" class="nav-link" data-section="certifications">Certs</a>
+                <a href="#contact" class="nav-link" data-section="contact">Contact</a>
+            </div>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="terminal-window">
+                <div class="terminal-header">
+                    <div class="terminal-dots">
+                        <span class="dot dot-red"></span>
+                        <span class="dot dot-yellow"></span>
+                        <span class="dot dot-green"></span>
+                    </div>
+                    <div class="terminal-title">nguyen@sre-portfolio:~</div>
+                </div>
+                <div class="terminal-body">
+                    <div class="terminal-line">
+                        <span class="prompt">$</span>
+                        <span class="command" id="typed-command"></span>
+                        <span class="cursor-blink">▌</span>
+                    </div>
+                    <div class="terminal-output" id="terminal-output"></div>
+                </div>
+            </div>
+            <div class="hero-info">
+                <div class="hero-tag">System Administrator & Site Reliability Engineer</div>
+                <h1 class="hero-name">Nguyen Van A</h1>
+                <p class="hero-description">Đảm bảo hệ thống luôn vận hành ổn định với <span class="highlight">99.99% uptime</span>. Chuyên gia về <span class="highlight">Cloud Infrastructure</span>, <span class="highlight">Kubernetes</span> và <span class="highlight">Automation</span>.</p>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="99.99">0</span><span class="stat-suffix">%</span>
+                        <span class="stat-label">Uptime SLA</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="500">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Servers Managed</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="7">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="50">0</span><span class="stat-suffix">+</span>
+                        <span class="stat-label">Incidents Resolved</span>
+                    </div>
+                </div>
+                <div class="hero-actions">
+                    <a href="#contact" class="btn btn-primary">
+                        <span class="btn-icon">→</span> Liên hệ ngay
+                    </a>
+                    <a href="#projects" class="btn btn-secondary">
+                        <span class="btn-icon">⚡</span> Xem Projects
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// 01</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p class="about-intro">Xin chào! Mình là một <strong>System Administrator</strong> và <strong>Site Reliability Engineer</strong> với hơn 7 năm kinh nghiệm trong việc xây dựng và vận hành hạ tầng công nghệ quy mô lớn.</p>
+                    <p>Mình đam mê việc tự động hóa mọi thứ có thể, xây dựng các hệ thống có khả năng tự phục hồi (self-healing), và đảm bảo rằng người dùng cuối luôn có trải nghiệm mượt mà nhất.</p>
+                    <p>Triết lý làm việc của mình: <em>"Toil is the enemy. Automate everything, monitor everything, and sleep well at night."</em></p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-icon">🔧</span>
+                            <div>
+                                <strong>Infrastructure as Code</strong>
+                                <span>Terraform, Ansible, Pulumi</span>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">☁️</span>
+                            <div>
+                                <strong>Multi-Cloud</strong>
+                                <span>AWS, GCP, Azure</span>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">📊</span>
+                            <div>
+                                <strong>Observability</strong>
+                                <span>Prometheus, Grafana, ELK</span>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">🚀</span>
+                            <div>
+                                <strong>CI/CD</strong>
+                                <span>GitLab CI, GitHub Actions, ArgoCD</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-terminal">
+                    <div class="mini-terminal">
+                        <div class="mini-terminal-header">
+                            <div class="terminal-dots">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                            </div>
+                            <span>system_info.sh</span>
+                        </div>
+                        <div class="mini-terminal-body">
+                            <pre><code><span class="t-comment">#!/bin/bash</span>
+<span class="t-command">echo</span> <span class="t-string">"=== System Engineer Profile ==="</span>
+
+<span class="t-variable">NAME</span>=<span class="t-string">"Nguyen Van A"</span>
+<span class="t-variable">ROLE</span>=<span class="t-string">"SRE / System Admin"</span>
+<span class="t-variable">LOCATION</span>=<span class="t-string">"Ho Chi Minh City, Vietnam"</span>
+<span class="t-variable">EXPERIENCE</span>=<span class="t-string">"7+ years"</span>
+
+<span class="t-comment"># Core competencies</span>
+<span class="t-variable">SKILLS</span>=(<span class="t-string">"Linux"</span> <span class="t-string">"Kubernetes"</span> <span class="t-string">"Docker"</span>
+        <span class="t-string">"Terraform"</span> <span class="t-string">"AWS"</span> <span class="t-string">"GCP"</span>
+        <span class="t-string">"Prometheus"</span> <span class="t-string">"Python"</span>)
+
+<span class="t-comment"># Current status</span>
+<span class="t-variable">UPTIME</span>=<span class="t-string">"99.99%"</span>
+<span class="t-variable">COFFEE_LEVEL</span>=<span class="t-string">"████████░░ 80%"</span>
+<span class="t-variable">INCIDENTS_TODAY</span>=<span class="t-string">"0 🎉"</span>
+
+<span class="t-command">echo</span> <span class="t-string">"Status: <span class="t-green">OPERATIONAL</span>"</span></code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="section section-alt" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// 02</span>
+                <h2 class="section-title">Tech Stack</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <!-- Operating Systems -->
+                <div class="skill-category" data-aos="fade-up">
+                    <div class="skill-category-header">
+                        <span class="skill-icon">🐧</span>
+                        <h3>Operating Systems</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-badge"><span class="skill-dot" style="--dot-color: #FCC624"></span>Linux (RHEL/Ubuntu/CentOS)</div>
+                        <div class="skill-badge"><span class="skill-dot" style="--dot-color: #0078D4"></span>Windows Server</div>
+                        <div class="skill-badge"><span class="skill-dot" style="--dot-color: #E95420"></span>FreeBSD</div>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar-label">
+                            <span>Proficiency</span>
+                            <span>95%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-width="95"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Container & Orchestration -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-category-header">
+                        <span class="skill-icon">🐳</span>
+                        <h3>Containers & Orchestration</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-badge"><span class="skill-dot" style="--dot-color: #2496ED"></span>Docker</div>
+                        <div class="skill-badge"><span class="skill-dot" style="--dot-color: #326CE5"></span>Kubernetes</div>
+                        <div class="skill-badge"><span class="skill-dot" style="--dot-color: #EF7B4D"></span>Helm</div>
+                        <div class="skill-badge"><span class="skill-dot" style="--dot-color: #F04E98"></span>Istio</div>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar-label">
+                            <span>Proficiency</span>
+                            <span>90%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-width="90"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cloud Platforms -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-category-header">
+                        <span class="skill-icon">☁️</span>
+                        <h3>Cloud Platforms</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-badge"><span class="skill-dot" style="--dot-color: #FF9900"></span>AWS</div>
+                        <div class="skill-badge"><span class="skill-dot" style="--dot-color: #4285F4"></span>Google Cloud</div>
+                        <div class="skill-badge"><span class="skill-dot" style="--dot-color: #0089D6"></span>Azure</div>
+                        <div class="skill-badge"><span class="skill-dot" style="--dot-color: #1A1918"></span>DigitalOcean</div>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar-label">
+                            <span>Proficiency</span>
+                            <span>88%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-width="88"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IaC & Automation -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-category-header">
+                        <span class="skill-icon">⚙️</span>
+                        <h3>IaC & Automation</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-badge"><span class="skill-dot" style="--dot-color: #7B42BC"></span>Terraform</div>
+                        <div class="skill-badge"><span class="skill-dot" style="--dot-color: #EE0000"></span>Ansible</div>
+                        <div class="skill-badge"><span class="skill-dot" style="--dot-color: #8418EB"></span>Pulumi</div>
+                        <div class="skill-badge"><span class="skill-dot" style="--dot-color: #1BAF8F"></span>Packer</div>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar-label">
+                            <span>Proficiency</span>
+                            <span>92%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-width="92"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CI/CD -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+                    <div class="skill-category-header">
+                        <span class="skill-icon">🚀</span>
+                        <h3>CI/CD Pipeline</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-badge"><span class="skill-dot" style="--dot-color: #FC6D26"></span>GitLab CI</div>
+                        <div class="skill-badge"><span class="skill-dot" style="--dot-color: #2088FF"></span>GitHub Actions</div>
+                        <div class="skill-badge"><span class="skill-dot" style="--dot-color: #EF7B4D"></span>ArgoCD</div>
+                        <div class="skill-badge"><span class="skill-dot" style="--dot-color: #D33833"></span>Jenkins</div>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar-label">
+                            <span>Proficiency</span>
+                            <span>87%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-width="87"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Monitoring & Observability -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="500">
+                    <div class="skill-category-header">
+                        <span class="skill-icon">📊</span>
+                        <h3>Monitoring & Observability</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-badge"><span class="skill-dot" style="--dot-color: #E6522C"></span>Prometheus</div>
+                        <div class="skill-badge"><span class="skill-dot" style="--dot-color: #F46800"></span>Grafana</div>
+                        <div class="skill-badge"><span class="skill-dot" style="--dot-color: #005571"></span>ELK Stack</div>
+                        <div class="skill-badge"><span class="skill-dot" style="--dot-color: #00ADD8"></span>Datadog</div>
+                        <div class="skill-badge"><span class="skill-dot" style="--dot-color: #4AABEE"></span>PagerDuty</div>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar-label">
+                            <span>Proficiency</span>
+                            <span>93%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-width="93"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Networking -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="600">
+                    <div class="skill-category-header">
+                        <span class="skill-icon">🌐</span>
+                        <h3>Networking & Security</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-badge"><span class="skill-dot" style="--dot-color: #009639"></span>Nginx / HAProxy</div>
+                        <div class="skill-badge"><span class="skill-dot" style="--dot-color: #FF6C37"></span>Cloudflare</div>
+                        <div class="skill-badge"><span class="skill-dot" style="--dot-color: #5B2D8E"></span>WireGuard / OpenVPN</div>
+                        <div class="skill-badge"><span class="skill-dot" style="--dot-color: #333333"></span>iptables / nftables</div>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar-label">
+                            <span>Proficiency</span>
+                            <span>85%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-width="85"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Scripting -->
+                <div class="skill-category" data-aos="fade-up" data-aos-delay="700">
+                    <div class="skill-category-header">
+                        <span class="skill-icon">💻</span>
+                        <h3>Scripting & Programming</h3>
+                    </div>
+                    <div class="skill-items">
+                        <div class="skill-badge"><span class="skill-dot" style="--dot-color: #4EAA25"></span>Bash / Shell</div>
+                        <div class="skill-badge"><span class="skill-dot" style="--dot-color: #3776AB"></span>Python</div>
+                        <div class="skill-badge"><span class="skill-dot" style="--dot-color: #00ADD8"></span>Go</div>
+                        <div class="skill-badge"><span class="skill-dot" style="--dot-color: #CB171E"></span>Ruby</div>
+                    </div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar-label">
+                            <span>Proficiency</span>
+                            <span>82%</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-bar-fill" data-width="82"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="section" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// 03</span>
+                <h2 class="section-title">Experience</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <div class="timeline-badge current">Hiện tại</div>
+                        <h3 class="timeline-title">Senior SRE</h3>
+                        <div class="timeline-company">TechCorp Vietnam</div>
+                        <div class="timeline-period">01/2023 — Hiện tại</div>
+                        <ul class="timeline-details">
+                            <li>Lead SRE team gồm 5 engineers, quản lý hạ tầng phục vụ 10M+ users</li>
+                            <li>Thiết kế và triển khai Kubernetes clusters multi-region trên AWS EKS</li>
+                            <li>Xây dựng CI/CD pipeline với GitOps (ArgoCD) giảm deployment time từ 2h → 15 phút</li>
+                            <li>Implement SLO/SLI framework, đạt 99.99% uptime cho core services</li>
+                            <li>Giảm 60% infrastructure costs thông qua right-sizing và spot instances</li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span>AWS</span><span>Kubernetes</span><span>Terraform</span><span>ArgoCD</span><span>Prometheus</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">DevOps Engineer</h3>
+                        <div class="timeline-company">FinTech Solutions</div>
+                        <div class="timeline-period">06/2020 — 12/2022</div>
+                        <ul class="timeline-details">
+                            <li>Migrate monolith → microservices trên Kubernetes, giảm 40% latency</li>
+                            <li>Xây dựng centralized logging với ELK Stack xử lý 500GB logs/ngày</li>
+                            <li>Implement disaster recovery plan với RPO &lt; 1h và RTO &lt; 30 phút</li>
+                            <li>Tự động hóa security scanning trong CI pipeline với Trivy và SonarQube</li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span>GCP</span><span>Docker</span><span>Helm</span><span>ELK</span><span>GitLab CI</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-right">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">System Administrator</h3>
+                        <div class="timeline-company">DataCenter Vietnam</div>
+                        <div class="timeline-period">03/2018 — 05/2020</div>
+                        <ul class="timeline-details">
+                            <li>Quản lý 200+ servers vật lý và virtual (VMware ESXi / Proxmox)</li>
+                            <li>Triển khai Ansible playbooks tự động hóa provisioning, giảm 80% thời gian setup</li>
+                            <li>Thiết kế và vận hành network infrastructure (VLAN, VPN, Firewall)</li>
+                            <li>On-call rotation 24/7, MTTR trung bình &lt; 15 phút cho critical incidents</li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span>Linux</span><span>Ansible</span><span>VMware</span><span>Nagios</span><span>Bash</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item" data-aos="fade-left">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Junior System Administrator</h3>
+                        <div class="timeline-company">WebHost JSC</div>
+                        <div class="timeline-period">08/2016 — 02/2018</div>
+                        <ul class="timeline-details">
+                            <li>Quản lý shared hosting servers (cPanel/WHM) phục vụ 5000+ websites</li>
+                            <li>Xử lý incidents, troubleshoot performance issues trên LAMP stack</li>
+                            <li>Viết Bash scripts tự động hóa backup và monitoring</li>
+                        </ul>
+                        <div class="timeline-tech">
+                            <span>Linux</span><span>cPanel</span><span>MySQL</span><span>Bash</span><span>Zabbix</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="section section-alt" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// 04</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid">
+                <div class="project-card" data-aos="zoom-in">
+                    <div class="project-card-header">
+                        <div class="project-status">
+                            <span class="status-dot status-green"></span>
+                            <span>Production</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" title="GitHub">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">K8s Auto-Scaler Platform</h3>
+                    <p class="project-description">Custom Kubernetes HPA controller tích hợp với business metrics từ Prometheus. Tự động scale ứng dụng dựa trên request rate, queue depth và custom SLO thay vì chỉ CPU/Memory.</p>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-value">40%</span>
+                            <span class="metric-label">Cost reduction</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">&lt;30s</span>
+                            <span class="metric-label">Scale time</span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span>Go</span><span>Kubernetes</span><span>Prometheus</span><span>gRPC</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="project-card-header">
+                        <div class="project-status">
+                            <span class="status-dot status-green"></span>
+                            <span>Production</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" title="GitHub">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Infrastructure Monitoring Dashboard</h3>
+                    <p class="project-description">Centralized monitoring platform tích hợp Prometheus, Grafana, Alertmanager với custom alerting rules. Real-time visualization cho 500+ services với intelligent alert routing qua Slack/PagerDuty.</p>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-value">99.99%</span>
+                            <span class="metric-label">Alert accuracy</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">5min</span>
+                            <span class="metric-label">MTTD</span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span>Prometheus</span><span>Grafana</span><span>Python</span><span>Docker</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="project-card-header">
+                        <div class="project-status">
+                            <span class="status-dot status-blue"></span>
+                            <span>Open Source</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" title="GitHub">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Terraform AWS Landing Zone</h3>
+                    <p class="project-description">Bộ Terraform modules chuẩn hóa cho việc setup AWS multi-account organization. Bao gồm VPC, IAM, Security Hub, GuardDuty, CloudTrail với best practices compliance.</p>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-value">150+</span>
+                            <span class="metric-label">GitHub Stars</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">20+</span>
+                            <span class="metric-label">Contributors</span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span>Terraform</span><span>AWS</span><span>Python</span><span>GitHub Actions</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="project-card-header">
+                        <div class="project-status">
+                            <span class="status-dot status-yellow"></span>
+                            <span>Internal Tool</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" title="GitHub">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Incident Response Bot</h3>
+                    <p class="project-description">Slack bot tự động tạo incident channels, assign on-call engineers, collect timeline, và generate post-mortem templates. Tích hợp PagerDuty, Jira và Confluence.</p>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-value">70%</span>
+                            <span class="metric-label">MTTR reduction</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">200+</span>
+                            <span class="metric-label">Incidents handled</span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span>Python</span><span>Slack API</span><span>PostgreSQL</span><span>Docker</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="project-card-header">
+                        <div class="project-status">
+                            <span class="status-dot status-green"></span>
+                            <span>Production</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" title="GitHub">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">GitOps Deployment Engine</h3>
+                    <p class="project-description">End-to-end GitOps pipeline với ArgoCD, Kustomize, và Sealed Secrets. Progressive delivery sử dụng canary deployments với automatic rollback dựa trên error rate.</p>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-value">50+</span>
+                            <span class="metric-label">Daily deploys</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">0</span>
+                            <span class="metric-label">Failed rollouts</span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span>ArgoCD</span><span>Kustomize</span><span>Kubernetes</span><span>Bash</span>
+                    </div>
+                </div>
+
+                <div class="project-card" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="project-card-header">
+                        <div class="project-status">
+                            <span class="status-dot status-blue"></span>
+                            <span>Open Source</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" title="GitHub">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Log Aggregation Pipeline</h3>
+                    <p class="project-description">High-throughput log processing pipeline sử dụng Fluentd, Kafka và Elasticsearch. Xử lý 500GB logs/ngày với intelligent parsing, anomaly detection và retention policies.</p>
+                    <div class="project-metrics">
+                        <div class="metric">
+                            <span class="metric-value">500GB</span>
+                            <span class="metric-label">Logs/day</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-value">&lt;2s</span>
+                            <span class="metric-label">Ingest latency</span>
+                        </div>
+                    </div>
+                    <div class="project-tech">
+                        <span>Fluentd</span><span>Kafka</span><span>Elasticsearch</span><span>Go</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section class="section" id="certifications">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// 05</span>
+                <h2 class="section-title">Certifications</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="certs-grid">
+                <div class="cert-card" data-aos="flip-left">
+                    <div class="cert-icon cert-aws">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M18.75 11.35a4.32 4.32 0 0 1-.79-.08 3.9 3.9 0 0 1-.73-.23l-.17-.09a.47.47 0 0 1-.13-.12.23.23 0 0 1-.05-.16v-.56a.3.3 0 0 1 .09-.21.29.29 0 0 1 .22-.08.42.42 0 0 1 .14 0l.16.08a3.22 3.22 0 0 0 .59.19 2.44 2.44 0 0 0 .52.07 1 1 0 0 0 .56-.12.37.37 0 0 0 .18-.34.39.39 0 0 0-.11-.27 1.06 1.06 0 0 0-.44-.2l-.63-.2a1.63 1.63 0 0 1-.76-.47 1.07 1.07 0 0 1-.27-.73 1.1 1.1 0 0 1 .13-.54 1.06 1.06 0 0 1 .35-.39 1.6 1.6 0 0 1 .5-.23 2.1 2.1 0 0 1 .6-.08 2.47 2.47 0 0 1 .67.08 1.67 1.67 0 0 1 .5.2.52.52 0 0 1 .17.31v.53a.28.28 0 0 1-.09.22.36.36 0 0 1-.23.08.56.56 0 0 1-.27-.08 1.93 1.93 0 0 0-.8-.18 1 1 0 0 0-.48.09.34.34 0 0 0-.16.31.34.34 0 0 0 .12.26 1.36 1.36 0 0 0 .5.22l.61.19a1.58 1.58 0 0 1 .72.43 1 1 0 0 1 .24.7 1.18 1.18 0 0 1-.14.57 1.15 1.15 0 0 1-.37.4 1.68 1.68 0 0 1-.55.24 2.53 2.53 0 0 1-.68.09zM21.69 16.05a13.38 13.38 0 0 1-9.6 3.57 13.74 13.74 0 0 1-9.27-3.54.28.28 0 0 1 0-.42.27.27 0 0 1 .37 0A12.82 12.82 0 0 0 12 19a12.62 12.62 0 0 0 8.58-3.33.29.29 0 0 1 .39 0 .27.27 0 0 1 .05.38h-.33zM22.94 14.6a.37.37 0 0 1-.1.43 .41.41 0 0 1-.17.09.37.37 0 0 1-.22-.02c-.23-.12-.47-.21-.72-.3L12 7.7l-9.73 7.1a.37.37 0 0 1-.52-.08.37.37 0 0 1 .08-.52L12 7l10.17 7.1a.37.37 0 0 1 .17.22l.6.28z"></path></svg>
+                    </div>
+                    <h3 class="cert-name">AWS Solutions Architect Professional</h3>
+                    <span class="cert-issuer">Amazon Web Services</span>
+                    <span class="cert-date">2024</span>
+                    <div class="cert-badge-glow"></div>
+                </div>
+
+                <div class="cert-card" data-aos="flip-left" data-aos-delay="100">
+                    <div class="cert-icon cert-k8s">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M10.204 14.35l.007.01-.999 2.413a5.171 5.171 0 0 1-2.075-2.597l2.578-.437.004.005a.44.44 0 0 1 .484.606zm-.833-2.129a.44.44 0 0 0 .173-.756l.002-.011L7.585 9.7a5.143 5.143 0 0 0-.73 3.255l2.514-.725.002-.009zm1.145-1.98a.44.44 0 0 0 .699-.337l.01-.005.15-2.62a5.144 5.144 0 0 0-3.01 1.442l2.147 1.523.004-.002zm2.369 0l.004.002 2.147-1.523a5.144 5.144 0 0 0-3.01-1.442l.15 2.62.01.005a.44.44 0 0 0 .7.337zm.394 1.223l.002.01 2.514.725a5.143 5.143 0 0 0-.73-3.255l-1.96 1.754.002.011a.44.44 0 0 0 .172.756zm-.596 1.663a.44.44 0 0 0 .484-.606l.004-.005 2.578.437a5.171 5.171 0 0 1-2.075 2.597l-.999-2.413.008-.01zm-3.68 4.118l1.282-2.199a.474.474 0 0 0 .073-.017l1.242 2.245a5.18 5.18 0 0 1-2.597-.029zm8.862-6.064C18.065 5.478 13.783 2.4 12.001 2.4S5.938 5.478 5.135 11.18c-.403 2.864.38 5.297 2.258 6.698 1.09.813 2.143 1.222 3.293 1.222h2.63c1.15 0 2.203-.41 3.293-1.222 1.878-1.4 2.66-3.834 2.257-6.698z"></path></svg>
+                    </div>
+                    <h3 class="cert-name">CKA — Certified Kubernetes Administrator</h3>
+                    <span class="cert-issuer">Cloud Native Computing Foundation</span>
+                    <span class="cert-date">2023</span>
+                    <div class="cert-badge-glow"></div>
+                </div>
+
+                <div class="cert-card" data-aos="flip-left" data-aos-delay="200">
+                    <div class="cert-icon cert-gcp">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                    </div>
+                    <h3 class="cert-name">GCP Professional Cloud Architect</h3>
+                    <span class="cert-issuer">Google Cloud</span>
+                    <span class="cert-date">2023</span>
+                    <div class="cert-badge-glow"></div>
+                </div>
+
+                <div class="cert-card" data-aos="flip-left" data-aos-delay="300">
+                    <div class="cert-icon cert-terraform">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M1 3.5l7.5 4.3v8.6L1 12.1V3.5zm8.5 4.3l7.5-4.3v8.6l-7.5 4.3V7.8zM17.5 3.5L10 7.8v8.6l7.5-4.3V3.5zM10 17.8l7.5 4.3v-8.6L10 17.8z"></path></svg>
+                    </div>
+                    <h3 class="cert-name">HashiCorp Terraform Associate</h3>
+                    <span class="cert-issuer">HashiCorp</span>
+                    <span class="cert-date">2022</span>
+                    <div class="cert-badge-glow"></div>
+                </div>
+
+                <div class="cert-card" data-aos="flip-left" data-aos-delay="400">
+                    <div class="cert-icon cert-linux">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path></svg>
+                    </div>
+                    <h3 class="cert-name">RHCE — Red Hat Certified Engineer</h3>
+                    <span class="cert-issuer">Red Hat</span>
+                    <span class="cert-date">2021</span>
+                    <div class="cert-badge-glow"></div>
+                </div>
+
+                <div class="cert-card" data-aos="flip-left" data-aos-delay="500">
+                    <div class="cert-icon cert-security">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"></path></svg>
+                    </div>
+                    <h3 class="cert-name">CompTIA Security+</h3>
+                    <span class="cert-issuer">CompTIA</span>
+                    <span class="cert-date">2020</span>
+                    <div class="cert-badge-glow"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section section-alt" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">// 06</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3 class="contact-heading">Let's connect!</h3>
+                    <p class="contact-text">Đang tìm kiếm cơ hội mới hoặc muốn trao đổi về infrastructure, DevOps, hay SRE? Hãy liên hệ với mình!</p>
+                    <div class="contact-items">
+                        <a href="mailto:nguyen.vana@email.com" class="contact-item">
+                            <span class="contact-icon">📧</span>
+                            <div>
+                                <span class="contact-label">Email</span>
+                                <span class="contact-value">nguyen.vana@email.com</span>
+                            </div>
+                        </a>
+                        <a href="#" class="contact-item">
+                            <span class="contact-icon">💼</span>
+                            <div>
+                                <span class="contact-label">LinkedIn</span>
+                                <span class="contact-value">linkedin.com/in/nguyenvana</span>
+                            </div>
+                        </a>
+                        <a href="#" class="contact-item">
+                            <span class="contact-icon">🐙</span>
+                            <div>
+                                <span class="contact-label">GitHub</span>
+                                <span class="contact-value">github.com/nguyenvana</span>
+                            </div>
+                        </a>
+                        <a href="#" class="contact-item">
+                            <span class="contact-icon">📍</span>
+                            <div>
+                                <span class="contact-label">Location</span>
+                                <span class="contact-value">Ho Chi Minh City, Vietnam</span>
+                            </div>
+                        </a>
+                    </div>
+
+                    <!-- Status Widget -->
+                    <div class="status-widget">
+                        <div class="status-header">
+                            <span class="status-dot-live"></span>
+                            <span>System Status</span>
+                        </div>
+                        <div class="status-bars">
+                            <div class="status-bar-item">
+                                <span>Available for hire</span>
+                                <span class="status-active">● Active</span>
+                            </div>
+                            <div class="status-bar-item">
+                                <span>Response time</span>
+                                <span class="status-time">&lt; 24h</span>
+                            </div>
+                            <div class="status-bar-item">
+                                <span>Remote / On-site</span>
+                                <span class="status-active">● Both</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contact-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-input" placeholder="you@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <select id="subject" name="subject" class="form-input">
+                                <option value="hiring">Hiring / Job Opportunity</option>
+                                <option value="consulting">Consulting Request</option>
+                                <option value="collaboration">Collaboration</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-input form-textarea" placeholder="Your message..." rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full" id="submit-btn">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-icon">→</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-bracket">[</span>
+                    <span class="logo-text">sre</span>
+                    <span class="logo-cursor">_</span>
+                    <span class="logo-bracket">]</span>
+                </div>
+                <p class="footer-text">Built with ❤️ and lots of ☕ by Nguyen Van A</p>
+                <div class="footer-links">
+                    <a href="#">GitHub</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Blog</a>
+                </div>
+                <p class="footer-copyright">© 2026 — All systems operational.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
